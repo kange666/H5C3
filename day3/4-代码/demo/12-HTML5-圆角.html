@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            /*height: 200px;*/
+            height: 100px;
+            background-color: red;
+            margin: 100px auto;
+            /*添加边框圆角*/
+            /*1.设置一个值：四个角的圆角值都一样*/
+            /*border-radius: 10px;*/
+            /*2.设置两个值:第一个值控制左上/右下，第二个值控制右上/左下*/
+            /*border-radius: 10px 30px;*/
+            /*3.设置三个值：第一个值控制左上，第二值控制右上/左下，第三个值控制右下*/
+            /*border-radius: 10px 40px 60px;*/
+            /*4.设置四个值：左上  右上 右下 左下*/
+            /*border-radius: 10px 30px 60px 100px;*/
+
+            /*添加/是用来设置当前个不同方向的半径值  水平x方向/垂直y方向*/
+            /*border-radius: 100px/50px;*/
+
+            /*添加某个角点的圆角*/
+            /*border-radius: 0px 50px 0px 0px;*/
+            /*border-上下-左右-radius:*/
+            /*border-top-right-radius: 100px;
+            border-top-left-radius: 100px;*/
+            /*border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;*/
+
+            /*设置某个角点的两个方向上的不同圆角*/
+            /*border-top-right-radius: 100px 50px;
+            border-bottom-left-radius: 80px 40px;
+            border-bottom-right-radius: 60px 30px;
+            border-top-left-radius: 40px 20px;*/
+            /*如果想设置四个角点的不同方向上的不同圆角值*/
+            /*分别是水平方向的：左上，右上，右下，左下 / 垂直方向的：左上，右上，右下，左下*/
+            border-radius: 100px 0px 0px 0px/20px 0px 0px 0px;
+        }
+        .nav{
+            height: 65px;
+            margin:100px auto;
+        }
+        .left{
+            width: 14px;
+            height: 100%;
+            background: url("../images/left.gif") no-repeat;
+            float: left;
+        }
+        .center{
+            width: 800px;
+            height: 100%;
+            background: url("../images/center.gif");
+            float: left;
+        }
+        .right{
+            width: 11px;
+            height: 100%;
+            background: url("../images/right.gif") no-repeat;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="nav">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+</div>-->
+<div></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+应用缓存:
+a)	可配置需要缓存的资源
+b)	网络无连接应用仍可用
+c)	本地读取缓存资源，提升访问速度，增强用户体验
+d)	减少请求，缓解服务器负担
+
+想使用应用缓存，我们就需要
+1.创建应用缓存清单
+2.让页面去使用，加载缓存清单文件
+
+过程：
+1.添加缓存清单文件的引用
+	<html lang="en" manifest="demo.appcache">
+	注意：建议扩展名是appcache
+
+2.创建并设置缓存清单文件，意味着我们需要确定那些文件需要缓存，那些文件每次都会服务器获取
+CACHE MANIFEST
+#第一句必须是CACHE MANIFEST
+
+#CACHE:写在这个下面的文件默认都会被缓存
+CACHE:
+../images/l1.jpg
+../images/l2.jpg
+#  *:代表所有文件
+
+#NETWORK:写在这上下面的文件默认每次都需要从服务器重新获取
+NETWORK:
+../images/l3.jpg
+
+
+#FALLBACK:写在这个下面的文件，如果找不到资源，则使用指定的资源进行替换
+FALLBACK:
+../images/l4.jpg banner_1.jpg
+#  /:代表任意的文件
+
+3.添加mime类型：
+

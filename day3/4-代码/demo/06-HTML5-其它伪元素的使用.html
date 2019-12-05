@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*获取第一个字符：实现首字下沉*/
+        p::first-letter{
+            color: red;
+            font-size: 30px;
+            float: left;/*文本环绕*/
+        }
+
+        /*获取第一行内容:如果设置了::first-letter,那么无法同时设置它的样式*/
+        p::first-line{
+            text-decoration: underline;
+        }
+
+        /*设置当前选中内容的样式*/
+        p::selection{
+            background-color: pink;
+            color: red;
+            /*它只能设置显示的样式，而不能设置内容大小*/
+            /*font-size: 30px;*/
+        }
+    </style>
+</head>
+<body>
+<p>眉毛上的汗水和眉毛下的泪水，你必须选择一样<br>你不努力，活该生活在社会的最底层</p>
+</body>
+</html>

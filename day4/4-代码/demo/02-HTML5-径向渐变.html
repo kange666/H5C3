@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            /*添加径向渐变：产生也是图像*/
+            /*background: radial-gradient(red,blue);*/
+            /*语法：radial-gradient(形状 大小 坐标,颜色1，颜色2...)：
+            形状shape:circle:产生正方形的渐变色   ellipse:适配当前的形状,如果是正方形的容器，两者效果一样.如果宽高不一样，默认效果切换到ellipse
+            at position:坐标，默认在正中心。可以赋值坐标（参照元素的左上角），也可以赋值关键字(left center right top bottom)
+            大小size: closest-side：最近边； farthest-side：最远边； closest-corner：最近角； farthest-corner：最远角。默认是最远的角farthest-corner*/
+            /*background: radial-gradient(circle,red,blue);*/
+            /*background: radial-gradient(circle farthest-side at 50px 50px,red,blue);*/
+            /*background: radial-gradient(at left top,red,blue);*/
+            
+            /*设置颜色的位置*/
+            background: radial-gradient(red,red 50%,blue 50%,blue);
+        }
+    </style>
+<body>
+<div></div>
+</body>
+</html>

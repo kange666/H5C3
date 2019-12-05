@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;	
+				margin: 0;
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: absolute;
+				left: 100px;
+				right: 100px;
+				/*transition-property: left;
+				transition-duration: 2s;*/
+				/*transition: left 2s linear 2s;*/
+				transition:transform 2s;
+				transform-origin: right top; 
+				}
+			div:active{
+				transform: skew(30deg);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

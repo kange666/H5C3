@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        .darkred{
+            color: darkred;
+        }
+        .blueviolet{
+            color:blueviolet;
+        }
+        /*属性选择器：属性是相对于标签而言。所谓属性选择器就是根据指定名称的属性的值来查找元素*/
+        /*1.E[attr]:查找指定的拥有attr属性的E标签。如查找拥有style属性的li标签*/
+        li[style]{
+            text-decoration: underline;
+        }
+
+        /*2.E[attr=value]:查找拥有指定的Attr属性并且属性值为value的E标签。如想查找拥有class属性并且值为Red的li标签   =是严格匹配*/
+        li[class=red]{
+            /*font-size: 30px;*/
+        }
+        /*3.E[attr*=value]:查找拥有指定的attr属性并且属性值中包含(可以在任意位置)value的E标签*/
+        li[class*=red]{
+            /*font-size: 30px;*/
+        }
+        /*4.E[attr^=value]:查找拥有指定的attr属性并且属性值以value开头的E标签*/
+        li[class^=blue]{
+            font-size: 30px;
+        }
+        /*5.E[attr$=value]:查找拥有指定的attr属性并且属性值以value开结束的E标签*/
+        li[class$=blue]{
+            /*font-size: 30px;*/
+        }
+    </style>
+</head>
+<body>
+<p style="">看看能不能也添加样式</p>
+<ol>
+    <li class="red" style="">河南再次发生矿难，死伤人数超过100</li>
+    <li class="blue">禽流感次发生蔓延，温家宝指示</li>
+    <li class="darkred" style="">南方农作物减产绝收面积上亩</li>
+    <li class="blue">猪流感在广减产绝收发</li>
+    <li class="red">全国多作物减产绝收面积上亩</li>
+    <li class="blueviolet">猪流感在广东群体性暴发</li>
+</ol>
+</body>
+</html>
